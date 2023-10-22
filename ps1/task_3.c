@@ -115,10 +115,9 @@ void turn_back_in_first_corner(){
             }
         }
     }
-    if(facing_north()){
-        turn_left();
-    }else{
-        LLL
+   
+    while(!facing_north()){
+        turn_left();   
     }
     while(front_is_clear()){
         step();
