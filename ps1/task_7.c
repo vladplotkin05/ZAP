@@ -1,8 +1,8 @@
 #include<superkarel.h>
-#define FASTFuRIOS 120 
+#define FASTFuRIOS 100 
 #define LLLL turn_left();
 #define bp if(beepers_present()){return;}
-
+#define fb if(front_is_blocked()){return;}
 
 void turn__right(){
     set_step_delay(0);
@@ -76,10 +76,10 @@ void projectX(){
 }
 void STOCKCHEACK_the_exit(){
     while(left_is_blocked()){
-        step();
+       
         if(front_is_blocked()){
             return;
-        }
+        }step();
     }
     LLLL
     step();
