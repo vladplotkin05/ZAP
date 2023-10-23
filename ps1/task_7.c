@@ -105,9 +105,11 @@ void MERRFYYY(){
         step();
     }
     comeback_again();
+    pick_beeper();
     while(true){
     while(left_is_blocked()){
         step();
+        pick_beeper();
         if(front_is_blocked()){
             return;
         }
@@ -125,6 +127,26 @@ void MERRFYYY(){
         step();
         LLLL
         step();
+        pick_beeper();
+        if(front_is_blocked()){
+            return;
+
+        }
+    }
+    if(left_is_clear()){
+        LLLL
+        step();
+        pick_beeper();
+        if(!beepers_present()){
+            put_beeper();
+        }else{
+            pick_beeper();
+        }
+        comeback_again();
+        step();
+        LLLL
+        step();
+        pick_beeper();
         if(front_is_blocked()){
             return;
 
@@ -140,7 +162,7 @@ int main(){
     while(front_is_clear()){
         STOCKCHEACK_the_exit();
     }
-    turn_off();
+   // turn_off();
     set_step_delay(100);
     MERRFYYY();
     turn_off();
