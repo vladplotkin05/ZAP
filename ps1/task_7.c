@@ -1,5 +1,5 @@
 #include<superkarel.h>
-#define FASTFuRIOS 77 
+#define FASTFuRIOS 120 
 #define LLLL turn_left();
 #define bp if(beepers_present()){return;}
 
@@ -49,17 +49,20 @@ void stocking_cheacking_the_room(){
     before_while_true();
     if(front_is_clear()){
         put_beeper();
+        step();
     }else{
         comeback_again();
         step();
         stocking_cheacking_the_room();
-        if(front_is_clear()){
-            pick_beeper();
-            step();
+        comeback_again();
+        step();
+        pick_beeper();
+        if(!beepers_present()){
+            put_beeper();
         }
+        comeback_again();
+        step();
     }
-
-    
 }
 void projectX(){
     if(front_is_clear()){
@@ -71,9 +74,12 @@ void projectX(){
     }
     comeback_again();
 }
-bool STOCKCHEACK_the_exit(){
+void STOCKCHEACK_the_exit(){
     while(left_is_blocked()){
         step();
+        if(front_is_blocked()){
+            return;
+        }
     }
     LLLL
     step();
@@ -81,12 +87,15 @@ bool STOCKCHEACK_the_exit(){
         comeback_again();
         step();
         LLLL
+        if(front_is_blocked()){
+            return;
+        }
         step();
-        return true;
+        STOCKCHEACK_the_exit();
     }else{
         stocking_cheacking_the_room();
+        projectX();
     }
-    return false;
 }
 void MERRFYYY(){
     while(!facing_west()){
@@ -128,18 +137,12 @@ int main(){
     set_step_delay(0);
     stock_X();
 
-    while(STOCKCHEACK_the_exit()){
-        projectX();
+    while(front_is_clear()){
+        STOCKCHEACK_the_exit();
     }
     turn_off();
-    STOCKCHEACK_the_exit();
-    projectX();
     set_step_delay(100);
     MERRFYYY();
-    
-
-    
-
     turn_off();
 return 0;
 }
