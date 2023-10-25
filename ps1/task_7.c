@@ -1,5 +1,5 @@
 #include<superkarel.h>
-#define FASTFuRIOS 100 
+#define FASTFuRIOS 52 
 #define LLLL turn_left();
 #define bp if(beepers_present()){return;}
 #define fb if(front_is_blocked()){return;}
@@ -129,7 +129,7 @@ void MERRFYYY(){
         step();
         pick_beeper();
         if(front_is_blocked()){
-            return;
+            break;
 
         }
     }
@@ -163,8 +163,21 @@ int main(){
         STOCKCHEACK_the_exit();
     }
 
-    set_step_delay(100);
+    set_step_delay(10);
     MERRFYYY();
+    if(left_is_clear()){
+        LLLL
+        step();
+        pick_beeper();
+        if(!beepers_present()){
+            put_beeper();
+        }else{
+            pick_beeper();
+        }
+        comeback_again();
+        step();
+        LLLL
+    }
     turn_off();
 return 0;
 }
