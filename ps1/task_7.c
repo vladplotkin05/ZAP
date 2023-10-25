@@ -162,7 +162,7 @@ int main(){
     while(front_is_clear()){
         STOCKCHEACK_the_exit();
     }
-   // turn_off();
+
     set_step_delay(100);
     MERRFYYY();
     turn_off();
