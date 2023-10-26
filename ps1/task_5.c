@@ -3,6 +3,7 @@
 #define _0_ set_step_delay(0);
 #define _77_ set_step_delay(77);
 #define LLL turn_left();
+#define reefwf _180_ step();
 
 void turn__180(){
     _0_
@@ -55,16 +56,14 @@ void messi() {
     }
     step();
     if(beepers_present()){
-        _180_
-        step();
+        reefwf
         pick_beeper();
         _180_
         messi();
     }
 }
 void mbappe(){
-    _180_
-    step();
+    reefwf
 }
 void square_draw(){
     while(true){
