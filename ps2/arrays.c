@@ -47,7 +47,9 @@ int auuuuu_52(int a, int b) {
     return a;
 }
 //task_5
-int find_missing_number(const int n, const int arr[]){
+int find_missing_number(const int arr[], const int n){
+
+  
   int unrealsmmar = ((n * (n + 1)) / 2);
 	 int realsummsa = 0;
      for (int v = 0; v < n; v++) {
@@ -125,12 +127,6 @@ void podium(const int n, int arr[]){
 	arr[2]=n/3 - 1 -n%3;
 }
 int main() {
-int heights[3];
-int material = 6;
-podium(material, heights);
-
-for(int i = 0; i < 3; i++){
-    printf("%d ", heights[i]);
-}
-printf("\n");
+int input_array[] = {0, 4, 23, 17, 20, 21, 2, 12, 22, 10, 14, 7, 18, 9, 13, 11, 19, 5, 16, 15, 1, 3, 6};
+printf("%d\n", find_missing_number(input_array, 23));
 }
