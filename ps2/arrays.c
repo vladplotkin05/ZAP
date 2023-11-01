@@ -122,11 +122,29 @@ int nn=n;
 }
 //task_9
 void podium(const int n, int arr[]){
-	arr[0]=n/3 + n%3;
-	arr[1]=n/3 + 1 +n%3;
-	arr[2]=n/3 - 1 -n%3;
+    if(n%3 == 2){
+	arr[0]=n/3 + n%3/2;
+	arr[1]=n/3 + n%3;
+	arr[2]=n/3 - 1;
+    }
+    if(n%3 == 0){
+    arr[0]=n/3;
+    arr[1]=n/3 + 1;
+    arr[2]=n/3 - 1;
+    }
+    if(n%3 == 1){
+    arr[0]=n/3 + n%3;
+    arr[1]=n/3 + 1 + n%3;
+    arr[2]=n/3 - 1 - n%3;
+    }
 }
 int main() {
-int input_array[] = {0, 4, 23, 17, 20, 21, 2, 12, 22, 10, 14, 7, 18, 9, 13, 11, 19, 5, 16, 15, 1, 3, 6};
-printf("%d\n", find_missing_number(input_array, 23));
+int heights[3];
+int material = 340;
+podium(material, heights);
+
+for(int i = 0; i < 3; i++){
+    printf("%d ", heights[i]);
+}
+printf("\n");
 }
