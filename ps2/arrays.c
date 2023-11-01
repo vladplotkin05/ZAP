@@ -73,7 +73,8 @@ int binomialCoeff(int n, int k)
 unsigned long sum_squared(const int line){
 unsigned long sum = 0;
     for (int v = 0; v <= line; v++) {
-	sum += pow(binomialCoeff(line, v),2);
+    unsigned long to_the_second = binomialCoeff(line, v);
+    sum += to_the_second * to_the_second;
 }
 return sum;
 }
@@ -139,12 +140,6 @@ void podium(const int n, int arr[]){
     }
 }
 int main() {
-int heights[3];
-int material = 340;
-podium(material, heights);
+    printf("%lu\n", sum_squared(29));
 
-for(int i = 0; i < 3; i++){
-    printf("%d ", heights[i]);
-}
-printf("\n");
 }
