@@ -120,10 +120,17 @@ int nn=n;
 }
 //task_9
 void podium(const int n, int arr[]){
-	arr[0]=n/3;
-	arr[1]=n/3 + 1+n%3;
-	arr[2]=n/3 - 1;
+	arr[0]=n/3 + n%3;
+	arr[1]=n/3 + 1 +n%3;
+	arr[2]=n/3 - 1 -n%3;
 }
 int main() {
-printf("%d\n", factorize_count(30));
+int heights[3];
+int material = 6;
+podium(material, heights);
+
+for(int i = 0; i < 3; i++){
+    printf("%d ", heights[i]);
+}
+printf("\n");
 }
