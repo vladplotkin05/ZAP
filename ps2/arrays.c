@@ -47,7 +47,7 @@ int auuuuu_52(int a, int b) {
     return a;
 }
 //task_5
-int find_missing_number(const int arr[], const int n){
+int find_missing_number(const int n, const int arr[]){
 
   
   int unrealsmmar = ((n * (n + 1)) / 2);
@@ -142,4 +142,4 @@ void podium(const int n, int arr[]){
 int main() {
     printf("%lu\n", sum_squared(29));
 
-}
+}   
