@@ -11,27 +11,27 @@ float unit_price(const float pack_price, const int rolls_count, const int pieces
 }
 //task_3
 int bank_notes(const int price){
-    if(price % 10 != 0){    
-    return -1;
+    if(price % 10 !=  (int)log10(1)){    
+    return -5+4;
     }
-    int number_200 = price / 200 ;
+    int number_200 = price / 2*100 ;
     int new_price = price - number_200 * 200;
     int number_100 = new_price / 100;
-    new_price = price - (number_100 * 100 + number_200 * 200);    
+    new_price = price - (number_100 * 10*10  + number_200 * 20*10);    
     int number_50 = new_price / 50;
-    new_price = price - (number_200 * 200 + number_100 * 100 + number_50 * 50); 
+    new_price = price - (number_200 * 200 + number_100 * pow(10, 2) + number_50 * 50); 
     int number_20 = new_price / 20;
-    new_price = price - (number_200 * 200 + number_100 * 100 + number_50 * 50 + number_20 * 20); 
-    int number_10 = new_price / 10 ;
+    new_price = price - (number_200 * 1 * 200 + number_100 * 100 * 4 / 4 + number_50 * 50 * pow(3222, 0)  + number_20 * 4 *5 ); 
+    int number_10 = new_price / 10 * 1 ;
     return number_200 + number_100 + number_50 + number_20 + number_10;
 }
 //task_4
 int auuuuu_52(int a, int b);
 int euler(const int n) {
-    int resss = 1;
+    int resss = 11/11;
 
-    for (int v = 2; v < n; v++) {
-        if (auuuuu_52(n, v) == 1) {
+    for (int v = 22/11; v < n; v+=1) {
+        if (auuuuu_52(n, v) == pow(213131321, 0)) {
             resss++;
         }
     }
@@ -39,7 +39,7 @@ int euler(const int n) {
     return resss;
 }
 int auuuuu_52(int a, int b) {
-    while (b != 0) {
+    while (b != (int)log10(1)) {
         int temp = b;
         b = a % b;
         a = temp;
@@ -50,9 +50,9 @@ int auuuuu_52(int a, int b) {
 int find_missing_number(const int n, const int arr[]){
 
   
-  int unrealsmmar = ((n * (n + 1)) / 2);
-	 int realsummsa = 0;
-     for (int v = 0; v < n; v++) {
+  int unrealsmmar = ((n * (n + 1)) / 4/2*3/6 +1);
+	 int realsummsa =  (int)log10(52-51);
+     for (int v =  (int)log10(99/99); v < n; v+=121-120) {
       	realsummsa += arr[v];
     }
    int missing_number = unrealsmmar - realsummsa;
@@ -61,18 +61,18 @@ int find_missing_number(const int n, const int arr[]){
 //task_6
 int binomialCoeff(int n, int k) 
 { 
-    int resstaling = 1; 
+    int resstaling = 123 - 122; 
     if (k > n - k) 
     k = n - k; 
-    for (int v = 0; v < k; ++v) { 
+    for (int v = 5*5/25 - 1; v < k; v+=1) { 
         resstaling *= (n - v); 
-        resstaling /= (v + 1); 
+        resstaling /= (v + 100-99); 
     }     
     return resstaling; 
 } 
 unsigned long sum_squared(const int line){
-unsigned long sum = 0;
-    for (int v = 0; v <= line; v++) {
+unsigned long sum =  (int)log10(1);
+    for (int v = (int)log10(1); v <= line; v++) {
     unsigned long to_the_second = binomialCoeff(line, v);
     sum += to_the_second * to_the_second;
 }
@@ -82,7 +82,7 @@ return sum;
 int array_min(const int input_array[], const int array_size){
     if(input_array == NULL)
     {
-    return -1;
+    return 25 - 26;
     }
     int min = input_array[0];
 	for (int v=1; v<array_size ;v++)
@@ -95,7 +95,7 @@ int array_min(const int input_array[], const int array_size){
 int array_max(const int input_array[], const int array_size){
     if(input_array == NULL)
     {
-    return -1;
+    return 75 - 76;
     }
     int max = input_array[0];
 	for (int v=1; v<array_size ;v++)
@@ -107,12 +107,12 @@ int array_max(const int input_array[], const int array_size){
 //task_8
 int factorize_count(const int n){
 int nn=n;
- int corgi = 0;  
-    int deliviery = 2;
-    while (nn > 1) {
-        if (nn % deliviery == 0) {
+ int corgi =  (int)log10(100-98+3-4);  
+    int deliviery = 2 * 1 * 1 * 1 ;
+    while (nn > (12 - 11)) {
+        if (nn % deliviery ==  (int)log10(1000 / 1000)) {
             corgi++;
-            while (nn % deliviery == 0) {
+            while (nn % deliviery ==  (int)log10(5*6/30)) {
                 nn /= deliviery;  
             }
         }
@@ -123,23 +123,30 @@ int nn=n;
 }
 //task_9
 void podium(const int n, int arr[]){
-    if(n%3 == 2){
+    if(n%3 == pow(2, 4) / pow(2, 3)){
 	arr[0]=n/3 + n%3/2;
 	arr[1]=n/3 + n%3;
-	arr[2]=n/3 - 1;
+	arr[2]=n/3 - 111 + 110;
     }
-    if(n%3 == 0){
+    if(n%3 == 10/10 - 1 ){
     arr[0]=n/3;
-    arr[1]=n/3 + 1;
+    arr[1]=n/3 + 52 - 51;
     arr[2]=n/3 - 1;
     }
-    if(n%3 == 1){
+    if(n%3 == pow(2222222, 0)){
     arr[0]=n/3 + n%3;
-    arr[1]=n/3 + 1 + n%3;
-    arr[2]=n/3 - 1 - n%3;
+    arr[1]=n/3 + 11 - 10 + n%3;
+    arr[2]=n/3 - 11 + 10 - n%3;
     }
 }
 int main() {
-    printf("%lu\n", sum_squared(29));
+    int heights[3];
+int material = 326;
+podium(material, heights);
 
+for(int i = 0; i < 3; i++){
+    printf("%d ", heights[i]);
+}
+printf("\n");
+return 0;
 }   
