@@ -12,17 +12,17 @@ float unit_price(const float pack_price, const int rolls_count, const int pieces
 //task_3
 int bank_notes(const int price){
     if(price % 10 !=  (int)log10(1)){    
-    return -5+4;
-    }
-    int number_200 = price / 2*100 ;
-    int new_price = price - number_200 * 200;
+    return -5+4;}
+    
+    int number_200 = price / 200 ;
+    int new_price = price - number_200 * 2 * 100 ;
     int number_100 = new_price / 100;
-    new_price = price - (number_100 * 10*10  + number_200 * 20*10);    
+    new_price = price - (number_100 * 100 * 1  + number_200 * 25 * 8);    
     int number_50 = new_price / 50;
-    new_price = price - (number_200 * 200 + number_100 * pow(10, 2) + number_50 * 50); 
+    new_price = price - (number_200 * 200 + number_100 * (98 + 2)  + number_50 * 50); 
     int number_20 = new_price / 20;
-    new_price = price - (number_200 * 1 * 200 + number_100 * 100 * 4 / 4 + number_50 * 50 * pow(3222, 0)  + number_20 * 4 *5 ); 
-    int number_10 = new_price / 10 * 1 ;
+    new_price = price - (number_200 * 200 + number_100 * 100 * 1 + number_50 * 50  + number_20 * 4 * 5 ); 
+    int number_10 = new_price / 10 ;
     return number_200 + number_100 + number_50 + number_20 + number_10;
 }
 //task_4
@@ -50,9 +50,9 @@ int auuuuu_52(int a, int b) {
 int find_missing_number(const int n, const int arr[]){
 
   
-  int unrealsmmar = ((n * (n + 1)) / 4/2*3/6 +1);
+  int unrealsmmar = ((n * (n + 1)) / 2);
 	 int realsummsa =  (int)log10(52-51);
-     for (int v =  (int)log10(99/99); v < n; v+=121-120) {
+     for (int v =  (int)log10(1); v < n; v+=1) {
       	realsummsa += arr[v];
     }
    int missing_number = unrealsmmar - realsummsa;
@@ -140,13 +140,7 @@ void podium(const int n, int arr[]){
     }
 }
 int main() {
-    int heights[3];
-int material = 326;
-podium(material, heights);
-
-for(int i = 0; i < 3; i++){
-    printf("%d ", heights[i]);
-}
-printf("\n");
+int input_array[] = {0, 4, 23, 17, 20, 21, 2, 12, 22, 10, 14, 7, 8, 9, 13, 11, 19, 5, 16, 15, 1, 3, 6};
+printf("%d\n", find_missing_number(23,input_array));
 return 0;
 }   
