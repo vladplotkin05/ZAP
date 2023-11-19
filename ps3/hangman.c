@@ -57,14 +57,28 @@ void get_guessed_word(const char secret[], const char letters_guessed[], char gu
                 break;
             }
         }
-         //guessed_word[secret_length] = '\0';
     }
-
-
-
 }
+void get_available_letters(const char letters_guessed[], char available_letters[]){
+    int o=0;
+  for(int i=0;i<26;++i){
+        int u=0;
+        for(int t=0;t<strlen(letters_guessed);++t){
+            if((char)97+i==letters_guessed[t]){
+                u++;
+                break;
+            }
+        }
+        if(u==0){
+            available_letters[o]=(char)97+i;
+            o++;
+        }
+    }
+}
+
+
 int main(){
 char result[30];
-get_guessed_word("vladyslav", "dvksasltktehjeagjaesjoidjsfpisa", result);
+get_available_letters("azzs", result);
 printf("%s\n", result);
 }
