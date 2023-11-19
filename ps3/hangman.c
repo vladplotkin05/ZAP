@@ -32,3 +32,39 @@ int get_word(char secret[]){
 
     return 0;
 }
+int is_word_guessed(const char secret[], const char letters_guessed[]){
+    for(int i=0;i<strlen(secret);++i){
+        int u=0;
+        for(int t=0;t<strlen(letters_guessed);++t){
+            if(secret[i]==letters_guessed[t]){
+                u++;
+            }
+        }
+        if(u==0){
+            return 0;
+        }
+    }
+    return 1;
+}
+void get_guessed_word(const char secret[], const char letters_guessed[], char guessed_word[]){
+  for(int i=0;i<strlen(secret);++i){
+        int u=0;
+        guessed_word[i] = '_';
+        for(int t=0;t<strlen(letters_guessed);++t){
+            if(secret[i]==letters_guessed[t]){
+                u++;
+                guessed_word[i] = secret[i];
+                break;
+            }
+        }
+         //guessed_word[secret_length] = '\0';
+    }
+
+
+
+}
+int main(){
+char result[30];
+get_guessed_word("vladyslav", "dvksasltktehjeagjaesjoidjsfpisa", result);
+printf("%s\n", result);
+}
