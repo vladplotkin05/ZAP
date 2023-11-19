@@ -70,16 +70,16 @@ void get_available_letters(const char letters_guessed[], char available_letters[
                 break;
             }
         }
-        if(u==0){
+        if(u == 0){
             available_letters[o]=(char)97+i;
             o++;
         }
     }
 }
 
-
-int main(){
-char result[30];
-get_available_letters("azzs", result);
-printf("%s\n", result);
-}
+// int main()
+// {
+//     char result[30];
+//     get_available_letters("azzs", result);
+//     printf("%s\n", result);
+// }
