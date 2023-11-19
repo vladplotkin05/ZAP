@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 #include "hangman.h"
-
+#include<string.h>
+#include<ctype.h>
 
 int get_word(char secret[]){
     // check if file exists first and is readable
