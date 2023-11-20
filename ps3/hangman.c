@@ -59,6 +59,7 @@ void get_guessed_word(const char secret[], const char letters_guessed[], char gu
             }
         }
     }
+    guessed_word[strlen(secret)] = '\0';
 }
 void get_available_letters(const char letters_guessed[], char available_letters[]){
     int o=0;
@@ -75,16 +76,34 @@ void get_available_letters(const char letters_guessed[], char available_letters[
             o++;
         }
     }
+    available_letters[0] = '\0';
 }
 void hangman(const char secret[]){
     printf("Welcome to the game, Hangman!\n");
     int a = strlen(secret);
     printf("I am thinking of a word that is %d letters long.\n", a);
     printf("-------------");
+    int b = 8;
+    while(b != 0){
+        for(int i=0;i<strlen(secret);++i){
+        int u=0;
+            get_guessed_word[i] = '_';
+            for(int t=0;t<strlen(secret);++t){
+                if(secret[i]==letter_guessed[t]){
+                u++;
+                get_guessed_word[i] = secret[i];
+                break;
+                }
+            }
+        }
+        b = 8-1;
+    }
+    printf("You have %d guesses left.\n", b);
 
 }
 
 // int main()
 // {
-//     hangman("secret");
+//     char result[30];
+    
 // }
