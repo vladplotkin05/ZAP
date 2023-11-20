@@ -41,6 +41,7 @@ void text_to_morse(const char text[], char output[])
         "---..",
         "----.",
         "-----"};
+    output[0] = '\0';
     for (int i = 0; i < strlen(text); ++i)
     {
         strcat(output, azbuka_morse[(int)text[i] - 97]);
@@ -87,6 +88,7 @@ void morse_to_text(const char morse[], char output[])
         "---..",
         "----.",
     };
+    output[0] = '\0';
     char morse_ay_52[200] = "";
     strcpy(morse_ay_52, morse);
     char *letter = strtok(morse_ay_52, " ");
