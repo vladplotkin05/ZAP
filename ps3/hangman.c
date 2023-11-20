@@ -77,16 +77,14 @@ void get_available_letters(const char letters_guessed[], char available_letters[
     }
 }
 void hangman(const char secret[]){
-
-<<<<<<< HEAD
+    printf("Welcome to the game, Hangman!\n");
+    int a = strlen(secret);
+    printf("I am thinking of a word that is %d letters long.\n", a);
+    printf("-------------");
+        
 }
-=======
- }
->>>>>>> 5a6d9777cb6ea68f14c2c050dd1eb55435316333
 
-// int main()
-// {
-//     char result[30];
-//     get_available_letters("azzs", result);
-//     printf("%s\n", result);
-// }
+int main()
+{
+    hangman("secret");
+}
