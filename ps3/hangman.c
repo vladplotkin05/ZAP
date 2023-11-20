@@ -81,10 +81,10 @@ void hangman(const char secret[]){
     int a = strlen(secret);
     printf("I am thinking of a word that is %d letters long.\n", a);
     printf("-------------");
-        
+
 }
 
-int main()
-{
-    hangman("secret");
-}
+// int main()
+// {
+//     hangman("secret");
+// }
