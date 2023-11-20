@@ -78,7 +78,11 @@ void get_available_letters(const char letters_guessed[], char available_letters[
 }
 void hangman(const char secret[]){
 
+<<<<<<< HEAD
 }
+=======
+ }
+>>>>>>> 5a6d9777cb6ea68f14c2c050dd1eb55435316333
 
 // int main()
 // {
