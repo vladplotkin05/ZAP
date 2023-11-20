@@ -179,7 +179,6 @@ int is_morse_code_valid(const char morse[])
     }
     return 1;
 }
-//ovlenvlkenvl
 // int main()
 // {
 // char output[150];
