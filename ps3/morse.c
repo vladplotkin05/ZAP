@@ -1,5 +1,6 @@
 #include <string.h>
-#include <stdio.h>
+#include<stdio.h>
+#include"morse.h"
 
 void text_to_morse(const char text[], char output[])
 {
