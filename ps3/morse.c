@@ -45,7 +45,9 @@ void text_to_morse(const char text[], char output[])
     for (int i = 0; i < strlen(text); ++i)
     {
         strcat(output, azbuka_morse[(int)text[i] - 97]);
-        strcat(output, " ");
+        if(i!=strlen(text)-1){
+            strcat(output, " ");
+        }
     }
 }
 void morse_to_text(const char morse[], char output[])
@@ -181,9 +183,9 @@ int is_morse_code_valid(const char morse[])
     }
     return 1;
 }
-// int main()
-// {
-// char output[150];
-// morse_to_text(".... . .-.. .-.. --- ..---", output);
-// printf("%s\n", output);
-// }
+int main()
+{
+char output[150];
+text_to_morse("Hello", output);
+printf("%s!\n", output);
+}
