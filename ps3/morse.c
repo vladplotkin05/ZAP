@@ -183,9 +183,9 @@ int is_morse_code_valid(const char morse[])
     }
     return 1;
 }
-// int main()
-// {
-// char output[150];
-// text_to_morse("Hello", output);
-// printf("%s!\n", output);
-// }
+int main()
+{
+char output[150];
+text_to_morse("Hello", output);
+printf("%s!\n", output);
+}
