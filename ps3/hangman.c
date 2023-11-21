@@ -118,7 +118,9 @@ void hangman(const char secret[])
         get_guessed_word(secret, letters_guessed, cleaner);
         
         printf("Please guess a letter: ");
+        if(letters_guessed == secret){
         return ;}
+        return;}
         // }
         // printf("You have %d guesses left.\n", b);
     }
