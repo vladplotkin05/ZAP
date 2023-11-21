@@ -92,8 +92,9 @@ void get_available_letters(const char letters_guessed[], char available_letters[
             available_letters[o] = (char)97 + i;
             o++;
         }
+        
     }
-    available_letters[0] = '\0';
+    available_letters[o] = '\0';
 }
 void hangman(const char secret[])
 {
@@ -125,9 +126,11 @@ void hangman(const char secret[])
         // printf("You have %d guesses left.\n", b);
     }
 }
-    // int main()
-    // {
-
-    //     hangman("hello");
-    //     return 0;
-    // }
+//     int main()
+//     {
+// char result[30];
+// get_available_letters("arpstxgoieyu", result);
+// printf("%s", result);
+//         // hangman("hello");
+//         // return 0;
+//     }
