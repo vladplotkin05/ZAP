@@ -201,9 +201,9 @@ void hangman(const char secret[])
     }
     printf("Sorry, you ran out of guesses. The word was %s.\n", secret);
 }
-int main()
-{
-    hangman("hello");
+// int main()
+// {
+//     hangman("hello");
 
-    return 0;
-}
+//     return 0;
+// }
