@@ -115,7 +115,7 @@ void hangman(const char secret[])
         printf("You have %d guesses left.\n", b);
         get_available_letters(letters_guessed, available_letters);
         printf("Available letters: %s\n", available_letters);
-        printf("Please guess a letter: ");
+        printf("Please guess a letter: \n");
         char guess[20];
         fgets(guess, sizeof(guess), stdin);
         if (strlen(guess) > 2)
@@ -133,7 +133,7 @@ void hangman(const char secret[])
         }
         // проверка символа на букву 
         if(isalpha(guess[0])==0){
-            printf(" Oops! '%c' is not a valid letter: ", guess[0]);
+            printf("Oops! '%c' is not a valid letter: ", guess[0]);
             guess[0]= '\0';
             get_guessed_word(secret, letters_guessed, guess);
             for (int i = 0; i < strlen(guess)-1; ++i)
@@ -183,12 +183,12 @@ void hangman(const char secret[])
             guess[0] = '\0';
             if (is_word_guessed(secret, letters_guessed))
             {
-                printf("Congratulations, you won! ");
+                printf("Congratulations, you won!\n");
                 return;
             }
         }else{
             guess[0] = '\0';
-             printf(" Oops! That letter is not in my word: ");
+             printf("Oops! That letter is not in my word: ");
              get_guessed_word(secret, letters_guessed, guess);
                        for (int i = 0; i < strlen(guess)-1; ++i)
             {
