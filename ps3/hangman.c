@@ -122,7 +122,7 @@ void hangman(const char secret[])
         {
             //----
             if(strncmp(secret, guess,strlen(secret)) == 0){
-                printf("Congratulations, you won! ");
+                printf("Congratulations, you won!\n");
                 return;
                 }else{
                      printf("Sorry, bad guess. The word was %s.", secret);
