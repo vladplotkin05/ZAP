@@ -115,7 +115,7 @@ void hangman(const char secret[])
         printf("You have %d guesses left.\n", b);
         get_available_letters(letters_guessed, available_letters);
         printf("Available letters: %s\n", available_letters);
-        printf("Please guess a letter: \n");
+        printf("Please guess a letter: ");
         char guess[20];
         fgets(guess, sizeof(guess), stdin);
         if (strlen(guess) > 2)
