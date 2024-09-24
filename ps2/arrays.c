@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include<math.h>
+#include <math.h>
 
 // task_1
 float lift_a_car(const int stick_length, const int human_weight, const int car_weight){
-    return(float)round((float)stick_length * human_weight / (human_weight + car_weight)*100)/100;
+    return (float)round((float)stick_length * human_weight / (human_weight + car_weight) * 100) / 100;
 }
 //task_2
 float unit_price(const float pack_price, const int rolls_count, const int pieces_count){
@@ -12,7 +12,7 @@ float unit_price(const float pack_price, const int rolls_count, const int pieces
 //task_3
 int bank_notes(const int price){
     if(price % 10 !=  (int)log10(1)){    
-    return -5+4;}
+    return -1;}
     
     int number_200 = price / 200 ;
     int new_price = price - number_200 * 2 * 100 ;
@@ -27,6 +27,7 @@ int bank_notes(const int price){
 }
 //task_4
 int auuuuu_52(int a, int b);
+
 int euler(const int n) {
     int resss = 11/11;
 
@@ -38,6 +39,7 @@ int euler(const int n) {
 
     return resss;
 }
+
 int auuuuu_52(int a, int b) {
     while (b != (int)log10(1)) {
         int temp = b;
@@ -119,7 +121,7 @@ int nn=n;
         deliviery++;
     }
 
-    return corgi;
+    return corgii;
 }
 //task_9
 void podium(const int n, int arr[]){
