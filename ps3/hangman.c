@@ -55,6 +55,7 @@ int is_word_guessed(const char secret[], const char letters_guessed[])
     }
     return 1;
 }
+
 void get_guessed_word(const char secret[], const char letters_guessed[], char guessed_word[])
 {
     for (int i = 0; i < strlen(secret); ++i)
@@ -73,6 +74,7 @@ void get_guessed_word(const char secret[], const char letters_guessed[], char gu
     }
     guessed_word[strlen(secret)] = '\0';
 }
+
 void get_available_letters(const char letters_guessed[], char available_letters[])
 {
     int o = 0;
@@ -95,15 +97,12 @@ void get_available_letters(const char letters_guessed[], char available_letters[
     }
     available_letters[o] = '\0';
 }
+
 void hangman(const char secret[])
 {
     int b = 8;
-    // char cleaner[150];
-    // cleaner[0] = '\0';
     char letters_guessed[28] = "";
     char available_letters[28];
-    // char result[30];
-    // int guess(char secret[]);
 
     printf("Welcome to the game, Hangman!\n");
     int a = strlen(secret);
@@ -120,7 +119,6 @@ void hangman(const char secret[])
         fgets(guess, sizeof(guess), stdin);
         if (strlen(guess) > 2)
         {
-            //----
             if(strncmp(secret, guess,strlen(secret)) == 0){
                 printf("Congratulations, you won!\n");
                 return;
@@ -128,10 +126,9 @@ void hangman(const char secret[])
                      printf("Sorry, bad guess. The word was %s.", secret);
                      return;
                 }
-            //----
             return;
         }
-        // проверка символа на букву 
+
         if(isalpha(guess[0])==0){
             printf("Oops! '%c' is not a valid letter: ", guess[0]);
             guess[0]= '\0';
@@ -144,13 +141,11 @@ void hangman(const char secret[])
             printf("-------------\n");
             continue;
         }
-        //на опуск в нижний резис
+
         guess[0] = tolower(guess[0]);
-        // на повтор букв
         int v=0;
         for(int i = 0;i<strlen(letters_guessed);++i){
-            if(letters_guessed[i]==guess[0]){
-        v++;}
+            if(letters_guessed[i]==guess[0]){v++;}
         }
         if(v!=0){
             printf("Oops! You've already guessed that letter: ");
@@ -163,13 +158,10 @@ void hangman(const char secret[])
             printf("-------------\n");
             continue;
         }
-        // добавление до одгаданих
         strcat(letters_guessed, guess);
         int j=0;
         for(int a = 0  ;a < strlen(secret);++a){
-            if(secret[a]==guess[0]){
-            j = 1;
-            }
+            if(secret[a]==guess[0]){j = 1;}
         }
         if(j == 1){
             printf("Good guess: ");
